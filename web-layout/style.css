@@ -1,0 +1,42 @@
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+body {display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 100vh; background: #eee; margin: 60px 0 40px;}
+h2 {width: 1200px; margin: 0 auto; letter-spacing: 2px; margin-bottom: 15px;}
+
+.header {width: 100%; height: 100px; background: lightblue;}
+.nav {width: 100%; height: 100px; background: lightpink;}
+.aside {width: 33.5%; height: 780px; background: lightsteelblue;}
+.section {width: 66.5%; height: 780px; background: lightgreen;}
+.footer {width: 100%; height: 100px; background: lightsalmon;}
+
+#wrap1 {position: relative; width: 1200px; margin-top: 30px;}
+#wrap1::before {content: '① Float Layout'; position: absolute; top: -70px; font-size: 2em; font-weight: 700;}
+#wrap1 .aside {float: left;}
+#wrap1 .section {float: left;}
+#wrap1 .footer {clear: both;}
+
+#wrap2 {position: relative; width: 1200px; margin-top: 130px; display: flex; flex-wrap: wrap;}
+#wrap2::before {content: '② Flex Layout'; position: absolute; top: -70px; font-size: 2em; font-weight: 700;}
+
+#wrap3 {position: relative; width: 1200px; display: grid; grid-template-columns: 33.5% 66.5%; grid-template-areas: "header header" "nav nav" "aside section" "footer footer"; margin-top: 130px;}
+#wrap3::before {content: '③ Grid Layout'; position: absolute; top: -70px; font-size: 2em; font-weight: 700;}
+#wrap3 .header {grid-area: header;}
+#wrap3 .nav {grid-area: nav;}
+#wrap3 .aside {grid-area: aside; width: 100%;}
+#wrap3 .section {grid-area: section; width: 100%;}
+#wrap3 .footer {grid-area: footer;}
+
+@media (max-width: 1220px) {
+    #wrap1 {width: 90%;}
+    #wrap2 {width: 90%;}
+    #wrap3 {width: 90%;}
+}
+
+@media (max-width: 700px) {
+    #wrap1 .aside {width: 100%; height: 400px;}
+    #wrap1 .section {width: 100%; height: 400px;}
+    #wrap2 .aside {width: 100%; height: 400px;}
+    #wrap2 .section {width: 100%; height: 400px;}
+    #wrap3 {grid-template-columns: 100%; grid-template-areas: "header" "nav" "aside" "section" "footer";}
+    #wrap3 .aside {width: 100%; height: 400px;}
+    #wrap3 .section {width: 100%; height: 400px;}
+}
