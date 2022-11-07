@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    background: lightpink;
+    flex-direction: column;
+}
+
+.login-box {
+    margin-top: 150px;
+    width: 50%;
+    height: 500px;
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

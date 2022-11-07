@@ -9,7 +9,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
   position: relative;
   flex-wrap: wrap;
 }
@@ -33,7 +32,6 @@ body {
 }
 
 .sidebar {
-  /* position: relative; */
   width: 30%;
   height: 700px;
   background: lightgoldenrodyellow;
