@@ -14,4 +14,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    top: 10px;
+}
+
+.blank:hover {
+    background-color: lightgreen;
+}
+
+.blank:focus {
+    background-color: green;
+}
+
+button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 5px 10px;
 }
