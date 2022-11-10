@@ -1,0 +1,18 @@
+.navbar {
+    background: lightblue;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+
+}
